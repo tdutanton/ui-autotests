@@ -23,7 +23,7 @@ val junitVersion = "6.1.0"
 val jacksonVersion = "2.21.3"
 val assertjVersion = "3.27.7"
 val aspectjVersion = "1.9.25"
-val selenideVersion = "7.18.0"
+val selenideVersion = "7.16.1"
 val cucumberVersion = "7.34.3"
 
 dependencies {
@@ -35,15 +35,19 @@ dependencies {
     // Allure для отчетов
     testImplementation("io.qameta.allure:allure-junit5:${allureVersion}")
     testImplementation("io.qameta.allure:allure-cucumber7-jvm:${allureVersion}")
+    testImplementation("io.qameta.allure:allure-selenide:${allureVersion}")
     // Jackson для JSON
     implementation("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
     // AssertJ для ассертов
     implementation("org.assertj:assertj-core:${assertjVersion}")
     // Selenide
-    implementation("com.codeborne:selenide:${selenideVersion}")
+    testImplementation("com.codeborne:selenide:${selenideVersion}")
     // Cucumber
     implementation("io.cucumber:cucumber-java:${cucumberVersion}")
     testImplementation("io.cucumber:cucumber-junit-platform-engine:${cucumberVersion}")
+    // JUnit Platform Suite для @Suite
+    testImplementation("org.junit.platform:junit-platform-suite-api:1.10.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-suite-engine:1.10.3")
 }
 
 tasks.test {
