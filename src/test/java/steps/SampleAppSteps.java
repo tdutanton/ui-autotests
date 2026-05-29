@@ -30,4 +30,10 @@ public class SampleAppSteps {
     TestContext.getCurrentPage().checkTextByAttributeValue(fieldName, value);
   }
 
+  @Тогда("проверим, что в Label {string} содержится значение {string}")
+  public void checkValueInLabel(String fieldName, String value) {
+    TestContext.getCurrentPage().checkText(fieldName, value);
+  }
+
+
 }

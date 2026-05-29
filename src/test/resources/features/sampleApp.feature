@@ -10,7 +10,7 @@
     Тогда проверим, что в поле "Password" содержится значение "pwd"
 
     Когда нажмем на кнопку "BtnLogIm"
-    Тогда проверим, что в поле "LblLoginStatus" содержится значение "Welcome, Master!"
+    Тогда проверим, что в Label "LblLoginStatus" содержится значение "Welcome, Master!"
 
     Когда нажмем на кнопку "BtnLogIm"
-    Тогда проверим, что в поле "LblLoginStatus" содержится значение "User logged out."
+    Тогда проверим, что в Label "LblLoginStatus" содержится значение "User logged out."
