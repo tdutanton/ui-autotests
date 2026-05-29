@@ -7,7 +7,7 @@ public class SampleAppPage extends BasePage implements Page {
 
   private final Map<String, By> fields = Map.of(
       "UserName", By.name("UserName"),
-      "Password", By.xpath("Password")
+      "Password", By.name("Password")
   );
 
   private final Map<String, By> buttons = Map.of(
