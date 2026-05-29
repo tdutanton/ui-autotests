@@ -8,13 +8,13 @@ import java.util.function.Supplier;
 public class PageRegistry {
 
   private static final Map<String, String> routes = Map.of(
-      "SampleApp", "http://www.uitestingplayground.com/sampleapp",
-      "Frames", "http://www.uitestingplayground.com/frames"
+      "SampleAppPage", "http://www.uitestingplayground.com/sampleapp",
+      "FramesPage", "http://www.uitestingplayground.com/frames"
   );
 
   private static final Map<String, Supplier<Page>> pages = Map.of(
-      "SampleApp", SampleApp::new,
-      "Frames", Frames::new
+      "SampleAppPage", SampleAppPage::new
+//      "FramesPage", FramesPage::new
   );
 
   public static Page load(String pageName) {
