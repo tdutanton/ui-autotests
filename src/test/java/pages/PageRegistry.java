@@ -4,6 +4,8 @@ import static com.codeborne.selenide.Selenide.open;
 
 import java.util.Map;
 import java.util.function.Supplier;
+import pages.frames.FramesPage;
+import pages.sampleApp.SampleAppPage;
 
 public class PageRegistry {
 
@@ -13,8 +15,8 @@ public class PageRegistry {
   );
 
   private static final Map<String, Supplier<Page>> pages = Map.of(
-      "SampleAppPage", SampleAppPage::new
-//      "FramesPage", FramesPage::new
+      "SampleAppPage", SampleAppPage::new,
+      "FramesPage", FramesPage::new
   );
 
   public static Page load(String pageName) {

@@ -1,7 +1,9 @@
-package pages;
+package pages.sampleApp;
 
 import java.util.Map;
 import org.openqa.selenium.By;
+import pages.BasePage;
+import pages.Page;
 
 public class SampleAppPage extends BasePage implements Page {
 
@@ -44,7 +46,7 @@ public class SampleAppPage extends BasePage implements Page {
 
   @Override
   public void selectDropdown(String fieldName, String value) {
-
+    throw new UnsupportedOperationException("selectDropdown not supported for SampleApp");
   }
 }
 
